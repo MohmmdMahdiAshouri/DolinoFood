@@ -1,0 +1,9 @@
+.description {
+    font-family: var(--reg);
+    font-size: 13px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,26 @@
+.item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.item span {
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+}
+
+.item a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #333;
+}
+
+.active {
+    color: var(--primaryColor) !important;
+}
+
+.active a {
+    color: var(--primaryColor) !important;
+}

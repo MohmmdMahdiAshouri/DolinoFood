@@ -1,0 +1,23 @@
+.favorits {
+    position: absolute;
+    color: #fff;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.favorits span {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.active {
+    background: var(--primaryColor) !important;
+}

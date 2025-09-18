@@ -1,0 +1,25 @@
+.input {
+    width: max-content;
+    height: 35px;
+    background: transparent;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.input input {
+    height: 30px;
+    width: 233px;
+}
+
+.input button {
+    height: 100%;
+    padding: 0 15px;
+    border: 2px solid var(--primaryColor);
+}
+
+.code {
+    background: #eee;
+    padding: 3px 10px;
+    border-radius: 5px;
+}

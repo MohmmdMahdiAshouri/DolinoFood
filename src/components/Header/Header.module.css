@@ -1,0 +1,93 @@
+.header {
+    width: 100%;
+    box-shadow: 0 0 10px #eee;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    min-height: 90px;
+    margin-top: 40px !important;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.right {
+    position: relative;
+}
+
+.logo {
+    width: 105px;
+    height: 64px;
+    background: url(/Images/logo.svg) 50% no-repeat;
+    background-size: auto;
+    background-size: auto;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 10px;
+    top: 3px;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    list-style: none;
+    margin-right: 150px;
+}
+
+.menu li {
+    font-size: 17px;
+}
+
+.menu li :hover{
+    color: var(--primaryColor);
+}
+
+.menu .active{
+    color: var(--primaryColor);
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    margin-right: 10px;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    text-decoration: none;
+    color: var(--primaryColor);
+    background: #fff;
+    font-size: 15px;
+    border: 1px solid #cbc9c9;
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-family: var(--reg);
+    cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: 0;
+    right: 16px;
+    width: 17px;
+    height: 17px;
+    border-radius: 100px;
+    background: #ef4123;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}

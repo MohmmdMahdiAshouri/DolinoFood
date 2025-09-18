@@ -1,0 +1,45 @@
+.methods {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+}
+
+.item {
+    padding: 20px 31px;
+    background: #fafafa;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.item span {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.item span:first-child {
+    font-size: 30px;
+}
+
+.item span:last-child {
+    font-size: 12px;
+}
+
+.active {
+    outline: 2px solid var(--primaryColor) !important;
+    position: relative;
+}
+
+.active::before {
+    position: absolute;
+    top: -9;
+    right: -8;
+    width: 20px;
+    height: 20px;
+    background: var(--primaryColor) url("/images/check.png") no-repeat center;
+    background-size: 80%;
+    content: "";
+    border-radius: 100px;
+}

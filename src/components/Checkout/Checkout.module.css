@@ -1,0 +1,19 @@
+.checkout {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 23px auto 60px;
+}
+
+.checkout .right {
+    width: 77%;
+    box-sizing: border-box;
+}
+
+.checkout .left {
+    width: 21%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fff;
+}

@@ -1,0 +1,37 @@
+.items {
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    padding: 10px;
+    background: #fafafa;
+    border-radius: 5px;
+    margin: 0 5px;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.text {
+    text-align: center;
+}
+
+.text h3 {
+    font-family: var(--bold);
+    font-weight: 500;
+    font-size: 14px;
+    margin: 10px 0 0;
+}
+
+.text p {
+    font-size: 12px;
+    color: #888;
+    margin: 10px 0 0;
+}
+
+.active {
+    outline: 2px solid var(--primaryColor);
+    background: #fff;
+}

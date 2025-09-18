@@ -1,0 +1,36 @@
+.image {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.image img {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.uploadBtn {
+    margin: 10px 0;
+    display: none;
+}
+
+.inputGroup{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    margin: 15px 5px;
+}
+
+.fileName{
+    font-size: 14px;
+    color: #888;
+}
+
+.chosefile{
+    font-size: 14px;
+    padding: 10px;
+    background-color: #d03434;
+}

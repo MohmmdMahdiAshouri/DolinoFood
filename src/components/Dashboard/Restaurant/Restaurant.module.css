@@ -1,0 +1,25 @@
+.item {
+    margin-bottom: 15px;
+}
+
+.item label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input {
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border: 1px solid #626262;
+    border-radius: 3px;
+    width: 65%;
+}
+
+.item select {
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border: 1px solid #626262;
+    border-radius: 3px;
+    font-family: var(--reg);
+}

@@ -1,0 +1,84 @@
+.head {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+}
+
+.logo {
+    width: 60px;
+    height: 56px;
+    background-size: cover !important;
+    border: 1px solid #eee;
+    padding: 0;
+    border-radius: 5px;
+    position: relative;
+}
+
+.text {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.text h5 {
+    margin: 0;
+    font-family: var(--bold);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.menu {
+    color: var(--primaryColor);
+    font-size: 14px;
+    font-family: var(--bold);
+    cursor: pointer;
+}
+
+.priceItems{
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: safe;
+    gap: 30px 0;
+}
+
+.priceItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--bold);
+}
+
+.priceItem span {
+    color: #343434;
+    font-size: 15px;
+}
+
+.btn {
+    margin: 15px auto;
+    height: 35px;
+    width: 100%;
+    background: var(--primaryColor);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.empty {
+    height: 30px;
+    width: 100%;
+    font-size: 14px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    color: #9e9c9c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,11 @@
+.restaurants {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.restaurants > a {
+    flex-basis: calc(33% - 15px);
+}

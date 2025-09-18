@@ -1,0 +1,12 @@
+.show {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.show p {
+    margin: 0;
+    font-family: var(--reg);
+    font-size: 14px;
+    color: #888;
+}

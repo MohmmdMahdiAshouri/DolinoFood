@@ -1,0 +1,44 @@
+.item {
+    height: max-content;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.right button {
+    color: var(--primaryColor);
+    font-size: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+.right p {
+    font-size: 14px;
+    font-family: var(--reg);
+}
+
+.left button {
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.items div:last-child {
+    border-bottom: none!important;
+}

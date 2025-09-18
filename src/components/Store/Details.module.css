@@ -1,0 +1,147 @@
+.details {
+    background: #fff;
+    padding: 20px 80px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headRight {
+    display: flex;
+    align-items: center;
+}
+
+.headRight h2 {
+    margin: 0;
+    font-family: var(--bold);
+    font-size: 27px;
+}
+
+.headRight span {
+    color: #888;
+    margin-right: 11px;
+}
+
+.status {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    background: #2acb2a;
+    border-radius: 100px;
+    margin-left: 13px;
+    outline: 4px solid #9ff09f;
+    animation-name: myAnim;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes myAnim {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.ready {
+    font-size: 14px;
+    color: #383c47;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.avrage {
+    padding: 4px 8px;
+    background-color: #21c64f;
+    color: #fff;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 14px;
+    height: max-content;
+    position: relative;
+    top: 4px;
+    margin-right: 10px;
+}
+
+.comments {
+    font-size: 12px;
+    border: 2px solid #ef4123;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 10px;
+    border-radius: 9px;
+    color: #ef4123;
+    height: max-content;
+    position: relative;
+    top: 3px;
+}
+
+.rate {
+    position: relative;
+    top: 5px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btRight {
+    margin-top: 10px;
+    font-size: 19px;
+    color: #888;
+    display: flex;
+    align-items: center;
+}
+
+.btRight span {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    font-size: 27px;
+    color: #ef4123;
+    display: flex;
+}
+
+.text {
+    margin-right: 10px;
+}
+
+.text span {
+    display: block;
+}
+
+.text span:last-child {
+    color: #888;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.btLeft {
+    display: flex;
+}
+
+.btLeft .item:last-child {
+    margin-right: 20px;
+}

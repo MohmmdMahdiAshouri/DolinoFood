@@ -1,0 +1,42 @@
+.finalPrice {
+    margin: auto;
+    display: block;
+    text-align: center;
+    transform: translateX(-12%);
+    -webkit-transform: translateX(-12%);
+    -moz-transform: translateX(-12%);
+    -ms-transform: translateX(-12%);
+    -o-transform: translateX(-12%);
+}
+
+.tx1 {
+    font-size: 18px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.price {
+    font-family: var(--bold);
+    font-size: 24px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.tooman {
+    font-family: var(--bold);
+    font-size: 24px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.finalPrice button {
+    background: var(--primaryColor);
+    color: #fff;
+    font-family: var(--reg);
+    padding: 10px 30px;
+    border: none;
+    width: 233px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}

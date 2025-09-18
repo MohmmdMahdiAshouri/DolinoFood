@@ -1,0 +1,10 @@
+.logo {
+    position: absolute;
+    background-size: 100% 100% !important;
+    z-index: 5;
+    bottom: 15px;
+    right: 15px;
+    width: 115px;
+    height: 115px;
+    border-radius: 10px;
+}

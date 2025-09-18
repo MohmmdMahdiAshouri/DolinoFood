@@ -1,0 +1,19 @@
+.top {
+    background: #f1f9ff;
+    padding: 25px;
+}
+
+.title h2 {
+    font-family: var(--bold);
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.orderId {
+    font-size: 15px;
+    color: #888;
+}
+
+.image {
+    margin: 20px 0;
+}

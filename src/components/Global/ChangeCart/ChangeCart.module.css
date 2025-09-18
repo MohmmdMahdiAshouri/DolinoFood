@@ -1,0 +1,27 @@
+.btns {
+    display: flex;
+    align-items: center;
+}
+
+.btns button {
+    background: transparent;
+    color: var(--primaryColor);
+    border-radius: 100px;
+    border: 1px solid var(--primaryColor);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+    cursor: pointer;
+}
+
+.btns button:hover {
+    background-color: var(--primaryColor);
+    color: #fff;
+}
+
+.btns span {
+    margin: 0 5px;
+}

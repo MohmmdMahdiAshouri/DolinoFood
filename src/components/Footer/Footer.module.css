@@ -1,0 +1,23 @@
+.allFooter {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    margin: 30px 0;
+    padding-bottom: 30px;
+}
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    line-height: 25px;
+    background: #fff;
+    padding: 10px 34px;
+    border-radius: 5px;
+    box-shadow: 0 4px 18px #ddd;
+    box-sizing: border-box;
+}
+
+.footer p {
+    width: 70%;
+}
+

@@ -1,0 +1,28 @@
+.sidebar{
+    padding: 30px 40px!important;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logOut {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.logOut span {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 23px;
+}
+
+.logOut div {
+    font-size: 14px;
+}

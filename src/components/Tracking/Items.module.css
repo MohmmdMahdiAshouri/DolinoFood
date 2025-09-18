@@ -1,0 +1,83 @@
+.items {
+    background: #fff;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.table {
+    border: 1px solid #eee;
+    direction: ltr;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+}
+
+.head > div {
+    padding: 10px;
+    font-family: var(--reg);
+    font-size: 14px;
+    background: #f8f8f8;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.head > div:first-child {
+    width: 50%;
+    text-align: right;
+}
+
+.head > div:nth-child(2) {
+    width: 20%;
+    text-align: center;
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+}
+
+.head > div:nth-child(3) {
+    width: 30%;
+    text-align: center;
+}
+
+.item > div {
+    background: #fff !important;
+    box-sizing: border-box;
+}
+
+.result {
+    width: 50%;
+    direction: ltr;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    border-right: 1px solid #eee;
+}
+
+.list span {
+    font-size: 14px;
+    width: 40%;
+    text-align: right;
+    padding: 10px;
+}
+
+.finalPrice {
+    border-right: 1px solid #eee;
+    border-top: 1px solid #eee;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    direction: rtl;
+}
+
+.finalPrice span:last-child {
+    background: #fdf8f8;
+    color: #dc3f3f;
+    padding: 3px 10px;
+    border-radius: 100px;
+    border: 1px solid #dc3f3f;
+}

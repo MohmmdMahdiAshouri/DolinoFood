@@ -1,0 +1,36 @@
+.delivery {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("/Images/fav-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+.delivery-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -100px;
+}
+
+.delivery-title1 {
+    font-size: 28px;
+    color: rgb(188, 29, 29);
+    font-weight: bold;
+}
+
+.delivery-title2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}

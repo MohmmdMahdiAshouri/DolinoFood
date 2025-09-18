@@ -1,0 +1,40 @@
+.image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.image img {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.uploadBtn {
+    margin: 10px 0;
+    display: none;
+}
+
+.inputGroup{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    margin: 15px 0;
+}
+
+.fileName{
+    font-size: 14px;
+    color: #888;
+}
+
+.chosefile{
+    font-size: 14px;
+    padding: 10px;
+    background-color: #d03434;
+}
+
+.closeBtn{
+    left: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+}

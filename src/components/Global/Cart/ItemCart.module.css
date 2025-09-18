@@ -1,0 +1,28 @@
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.right{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 15px;
+    font-family: var(--bold);
+}
+
+.price {
+    font-size: 14px;
+    color: #888;
+}
+
+.price span:last-child {
+    margin-right: 5px;
+}

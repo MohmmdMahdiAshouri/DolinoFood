@@ -1,0 +1,62 @@
+.comments {
+    padding-top: 20px;
+    background: #fff;
+}
+
+.item {
+    background: #fff;
+    padding: 10px 21px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prof {
+    background: #eee;
+    width: 55px;
+    height: 55px;
+    border-radius: 100px;
+    justify-content: center;
+    font-size: 24px;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+}
+
+.user {
+    margin-right: 15px;
+}
+
+.user h4 {
+    margin-bottom: 8px;
+    font-family: var(--bold);
+    font-weight: 500;
+    direction: ltr;
+}
+
+.user span {
+    font-size: 13px;
+    color: #888;
+    position: relative;
+    top: -6px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    font-size: 24px;
+}
+
+.content p {
+    font-size: 14px;
+    margin-bottom: 7px;
+    margin-top: 6px;
+}

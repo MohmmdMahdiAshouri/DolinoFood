@@ -1,0 +1,26 @@
+
+.headers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    margin-top: 50px;
+}
+
+.headers h3 {
+    font-size: 34px;
+    margin: 0;
+    font-family: var(--bold);
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--primaryColor);
+    cursor: pointer;
+}
+
+.merchantSlider {
+    margin-bottom: 100px;
+}
