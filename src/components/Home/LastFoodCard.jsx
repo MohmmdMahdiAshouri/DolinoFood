@@ -6,9 +6,10 @@ import { IoLocationOutline } from 'react-icons/io5'
 import styles from './LastFoodCard.module.css'
 import Stars from './Stars'
 
-function LastFoodCard() {
+function LastFoodCard(props) {
+    const {_id ,restaurantType , logo , branch , deliveryTime , address , background} = props
     return (
-        <Link className={styles.card} href={""}>
+        <Link className={styles.card} href={`/store/${_id}`}>
             <div className={styles.header}>
                 <div className={styles.image}>
                     <Image
@@ -16,7 +17,7 @@ function LastFoodCard() {
                     fill
                     placeholder='blur'
                     blurDataURL='/Images/vector.webp'
-                    src='/Images/testpop.webp' />
+                    src={`${process.env.NEXT_PUBLIC_LIARA_IMAGE_URL}${background}`} />
                 </div>
 
                 <div className={styles.favorits}>
@@ -24,26 +25,25 @@ function LastFoodCard() {
                 </div>
 
                 <div 
-                style={{background: `url("/Images/logotest.png")` }}
+                style={{background: `url(${process.env.NEXT_PUBLIC_LIARA_IMAGE_URL}${logo})`}}
                 className={styles.logo}>
                 </div>
 
                 <div className={styles.deliveryTime}>
-                    <span>60 تا 70</span>
-                    <span>دقیقه</span>
+                    <span>{deliveryTime}</span>
                 </div>
             </div>
 
             <div className={styles.footer}>
                 <div className={styles.title}>
-                    <h3>آماتا</h3>
-                    <span>(خاوران)</span>
+                    <h3>{restaurantType}</h3>
+                    <span>({branch})</span>
                 </div>
 
                 <div className={styles.details}>
                     <div className={styles.right}>
                         <IoLocationOutline />
-                        <span>خاوران</span>
+                        <span>{address}</span>
                     </div>
                     <div className={styles.left}>
                         <span className={styles.comments}>{`(420 نظر)`}</span>

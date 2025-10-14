@@ -1,0 +1,35 @@
+.mobile p {
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    margin: 10px auto auto;
+}
+
+.mobile input {
+    width: 78%;
+    padding: 8px 20px;
+    display: block;
+    box-sizing: border-box;
+    margin: 25px auto;
+    background: #ededed;
+    border: none;
+    border-radius: 5px;
+    direction: ltr;
+    font-family: var(--bold);
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.send {
+    display: block;
+    width: 80%;
+    margin: 15px auto;
+    padding: 11px 10px;
+    font-family: var(--reg);
+    background: var(--primaryColor);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

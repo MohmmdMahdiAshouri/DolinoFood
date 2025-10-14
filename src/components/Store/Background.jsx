@@ -5,14 +5,15 @@ import { IoIosArrowBack } from "react-icons/io";
 import Logo from "./Logo";
 import Favorits from "./Favorits";
 
-function Background() {
+function Background({data}) {
+    const {logo , background} = data
     return (
         <div className={styles.back}>
             <div className={styles.image}>
                 <Image
                     fill
                     alt=""
-                    src="/Images/testbg.webp"
+                    src={`${process.env.NEXT_PUBLIC_LIARA_IMAGE_URL}${background}`}
                     placeholder="blur"
                     blurDataURL="/images/vector.webp"
                     objectFit="cover"
@@ -24,7 +25,7 @@ function Background() {
                 <IoIosArrowBack fontSize={16}/>
             </Link>
 
-            <Logo />
+            <Logo logo={logo}/>
             <Favorits />
         </div>
     );

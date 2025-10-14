@@ -1,9 +1,9 @@
 import styles from './Logo.module.css'
 
-function Logo() {
+function Logo({logo}) {
     return (
         <div 
-            style={{background: "url(/Images/logotest.png)"}}
+            style={{background: `url(${process.env.NEXT_PUBLIC_LIARA_IMAGE_URL}${logo})`}}
             className={styles.logo}>
         </div>
     )

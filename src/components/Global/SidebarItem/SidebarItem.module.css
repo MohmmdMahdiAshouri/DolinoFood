@@ -5,6 +5,14 @@
     cursor: pointer;
 }
 
+.item:hover span{
+    color: var(--primaryColor)!important;
+}
+
+.item:hover a{
+    color: var(--primaryColor)!important;
+}
+
 .item span {
     display: flex;
     align-items: center;

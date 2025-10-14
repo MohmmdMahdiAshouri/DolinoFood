@@ -1,0 +1,40 @@
+.image {
+    position: relative;
+    width: 50%;
+    height: 150px;
+    margin-top: 15px;
+}
+
+.delete {
+    position: absolute;
+    top: -11px;
+    right: -8px;
+    background: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e12828;
+    color: #fff;
+    cursor: pointer;
+}
+
+.image img {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.chosefile{
+    width: 75px;
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 10px;
+    background-color: #d03434;
+}
+
+.uploadBtn {
+    margin: 10px 0;
+    display: none;
+}

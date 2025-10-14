@@ -1,38 +1,56 @@
-import Image from "next/image";
+"use client"
+import { useEffect, useRef, useState } from "react";
 import styles from "./Table.module.css";
+import Loading from "../Loading/Loading";
+import { fetchData } from "@/utils/ClientFunctions";
+import Notification from "../Notification/Notification";
 
-function Table({ columns }) {
+function Table({ columns, api, refresh}) {
+    const [loading, setLoading] = useState(false)
+    const [data, setData] = useState([])
+
+    const notifRef = useRef()
+
+    const getDatas = async () => {
+        setLoading(true)
+        const res = await fetchData(api , "GET")
+        if(res.success){
+            setData(res.data)
+        }
+        setLoading(false)
+    }
+
+    useEffect(() => {
+        getDatas()
+    },[refresh])
+
     return (
-        <table className={styles.table}>
-            <thead>
-                <tr>
-                    {columns.map((item , index) => (
-                        <th key={index} style={{ width: item.width }}>
-                            {item.title}
-                        </th>
-                    ))}
-                </tr>
-            </thead>
+        <>
+            <Notification ref={notifRef}/>
+            <Loading loading={loading}>
+                <table className={styles.table}>
+                    <thead>
+                        <tr>
+                            {columns.map((item , index) => (
+                                <th key={index} style={{ width: item.width }}>
+                                    {item.title}
+                                </th>
+                            ))}
+                        </tr>
+                    </thead>
 
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        {/* <Image
-                            src={"/Images/logotest.png"}
-                            objectFit="cover"
-                            width={60}
-                            height={60}
-                            alt=""
-                        /> */}
-                    </td>
-                    <td>آماتا</td>
-                    <td>هاشمیه</td>
-                    <td className="success status">active</td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
+                    <tbody>
+                            {data.map((item , index) => (
+                                <tr key={index}>
+                                    {columns.map((item1, index1) => (
+                                        <td key={index1}>{item1.render(item, index)}</td>
+                                    ))}
+                                </tr>
+                            ))}
+                    </tbody>
+                </table>
+            </Loading>
+        </>
     );
 }
 

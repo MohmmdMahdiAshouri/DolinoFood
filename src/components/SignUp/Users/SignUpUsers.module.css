@@ -1,0 +1,45 @@
+.items {
+    width: 34%;
+    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    background: #fff;
+    padding: 30px;
+    margin-top: 32px;
+    border-radius: 10px;
+    margin-bottom: 35px;
+    box-shadow: 0 0 10px #efefef;
+}
+
+.item {
+    text-align: right;
+}
+
+.item input {
+    padding: 10px 30px;
+    box-sizing: border-box;
+    font-family: var(--reg);
+    border: none;
+    border-radius: 5px;
+    background: #f8f8f8;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 17px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.existAccount {
+    color: var(--primaryColor);
+    font-size: 14px;
+    font-family: var(--bold);
+    cursor: pointer;
+}

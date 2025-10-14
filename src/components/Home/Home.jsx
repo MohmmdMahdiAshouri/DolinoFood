@@ -1,14 +1,14 @@
 import React from 'react'
 import Populars from './Populars'
-import LastFoods from './LastFoods'
+import LastRestaurants from './LastRestaurants'
 import Delivery from './Delivery'
 
-function Home() {
+function Home({data}) {
     return (
         <div className='container'>
             <Delivery />
             <Populars />
-            <LastFoods />
+            <LastRestaurants data={data.restaurant}/>
         </div>
     )
 }

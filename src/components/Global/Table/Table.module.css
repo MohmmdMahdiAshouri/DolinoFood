@@ -1,14 +1,15 @@
 .table {
     width: 100%;
+    border-collapse : separate;
+    border-spacing: 3px
 }
 
 .table thead {
     background: #f8f7f7;
-
 }
 
 .table thead tr th {
-    text-align: right;
+    text-align: center;
     font-family: var(--bold);
     padding: 10px 10px;
     font-size: 14px;
@@ -17,4 +18,27 @@
 .table td {
     font-size: 15px;
     border-bottom: 1px solid #eee;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.table img{
+    object-fit: cover;
+}
+
+.table .status{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    background: #e0f8d9;
+    color: #248507;
+    padding: 10px 5px !important;
+    margin: 0 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.btns button{
+    margin-left: 5px;
 }

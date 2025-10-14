@@ -1,12 +1,14 @@
 .image {
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 250px;
 }
 
 .image img {
     border-radius: 5px;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 .uploadBtn {
@@ -33,7 +35,7 @@
 }
 
 .closeBtn{
-    left: 10px;
+    left: 5px;
     width: 35px;
     height: 35px;
     font-size: 20px;

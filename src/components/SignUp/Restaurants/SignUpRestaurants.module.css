@@ -29,3 +29,14 @@
     font-size: 16px;
     margin-bottom: 17px;
 }
+
+.footer{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.existAccount{
+    color: var(--primaryColor);
+}

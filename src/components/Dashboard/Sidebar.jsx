@@ -1,3 +1,4 @@
+"use client"
 import styles from "./Sidebar.module.css";
 import { LuUserRound } from "react-icons/lu";
 import { TbListDetails } from "react-icons/tb";
@@ -8,8 +9,12 @@ import { MdOutlineDiscount, MdOutlineFastfood } from "react-icons/md";
 import { GoComment } from "react-icons/go";
 import { IoMdLogOut } from "react-icons/io";
 import SidebarItem from "../Global/SidebarItem/SidebarItem";
+import { signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 function Sidebar() {
+
+    const router = useRouter()
 
     const list = [
         {
@@ -33,7 +38,7 @@ function Sidebar() {
         {
             title: "دسته بندی غذاها",
             icon: <BiCategoryAlt />,
-            link: "/dashboard/foodcategory",
+            link: "/dashboard/foodCategory",
             access: ["MERCHANT"],
         },
         {
@@ -81,7 +86,10 @@ function Sidebar() {
                     <SidebarItem key={index} data={item} />
                 ))}
 
-                <li className={styles.logOut}>
+                <li className={styles.logOut} onClick={async () => {
+                    await signOut({redirect : false})
+                    router.push("/")
+                }}>
                     <span>
                         <IoMdLogOut />
                     </span>

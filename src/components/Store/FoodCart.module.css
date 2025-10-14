@@ -46,7 +46,7 @@
     color: var(--primaryColor);
 }
 
-.price:hover{
+.price:hover {
     transform: scale(1.3);
     transition-duration: 0.5s;
 }
@@ -69,7 +69,7 @@
     margin: auto;
 }
 
-.add:hover{
+.add:hover {
     background-color: var(--primaryColor);
     color: #fff;
 }

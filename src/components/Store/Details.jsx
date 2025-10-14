@@ -4,13 +4,14 @@ import { IoLocationOutline } from "react-icons/io5";
 import { TfiTimer } from "react-icons/tfi";
 import { GiFullMotorcycleHelmet } from "react-icons/gi";
 
-function Details() {
+function Details({data}) {
+    const {restaurantType , branch , address , deliveryTime} = data
     return (
         <div className={styles.details}>
             <div className={styles.header}>
                 <div className={styles.headRight}>
-                    <h2>آماتا</h2>
-                    <span>{`(مشهد)`}</span>
+                    <h2>{restaurantType}</h2>
+                    <span>({branch})</span>
                 </div>
 
                 <div className={styles.headLeft}>
@@ -36,7 +37,7 @@ function Details() {
             <div className={styles.bottom}>
                 <div className={styles.btRight}>
                     <IoLocationOutline />
-                    <span>هاشمیه</span>
+                    <span>{address}</span>
                 </div>
 
                 <div className={styles.btLeft}>
@@ -45,7 +46,7 @@ function Details() {
                             <TfiTimer />
                         </span>
                         <div className={styles.text}>
-                            <span>50 دقیقه</span>
+                            <span>{deliveryTime}</span>
                             <span>میانگین زمان ارسال</span>
                         </div>
                     </div>
