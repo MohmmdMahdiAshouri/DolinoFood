@@ -1,0 +1,21 @@
+.item {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.item label {
+    font-family: var(--reg);
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    min-width: 100px;
+    display: inline-block;
+}
+
+.item textarea {
+    width: 80%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 100px;
+    font-family: var(--reg);
+}

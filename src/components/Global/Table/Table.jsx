@@ -40,7 +40,7 @@ function Table({ columns, api, refresh}) {
                     </thead>
 
                     <tbody>
-                            {data.map((item , index) => (
+                            { data.map((item , index) => (
                                 <tr key={index}>
                                     {columns.map((item1, index1) => (
                                         <td key={index1}>{item1.render(item, index)}</td>

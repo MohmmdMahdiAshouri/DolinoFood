@@ -1,9 +1,10 @@
 import Tracking from '@/components/Tracking/Tracking'
-import React from 'react'
+import React, { use } from 'react'
 
-function page() {
+function page({params}) {
+    const {id} = use(params)
     return (
-        <Tracking />
+        <Tracking id={id}/>
     )
 }
 

@@ -1,4 +1,25 @@
-import { MapContainer, Marker, TileLayer, useMapEvents } from "react-leaflet";
+"use client";
+
+import dynamic from "next/dynamic";
+
+const MapContainer = dynamic(
+    () => import("react-leaflet").then((mod) => mod.MapContainer),
+    {
+        ssr: false,
+    }
+);
+const TileLayer = dynamic(
+    () => import("react-leaflet").then((mod) => mod.TileLayer),
+    {
+        ssr: false,
+    }
+);
+const Marker = dynamic(
+    () => import("react-leaflet").then((mod) => mod.Marker),
+    {
+        ssr: false,
+    }
+);
 
 function ChangeMap({ position, setPosition }) {
     const customIcon = new L.Icon({
@@ -9,7 +30,7 @@ function ChangeMap({ position, setPosition }) {
     const MapClick = () => {
         const map = useMapEvents({
             click(e) {
-                setPosition([e.latlng.lat , e.latlng.lng]);
+                setPosition([e.latlng.lat, e.latlng.lng]);
             },
         });
     };

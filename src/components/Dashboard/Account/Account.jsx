@@ -5,8 +5,11 @@ import Modal from "@/components/Global/Modal/Modal";
 import { notification } from "antd";
 import Logo from "./Logo";
 import Background from "./Background";
-import Map from "./Map";
-import ChangeMap from "./ChangeMap";
+import dynamic from "next/dynamic";
+const Map = dynamic(() => import("./Map"), { ssr: false });
+const ChangeMap = dynamic(() => import("./ChangeMap"), {
+    ssr: false,
+});
 import { AccountContext } from "@/context/AccountContext";
 import Loading from "@/components/Global/Loading/Loading";
 
@@ -25,7 +28,7 @@ function Account() {
     };
 
     const handleSuccess = () => {
-        setUserData({...userData ,lat : position[0] , lng : position[1] })
+        setUserData({ ...userData, lat: position[0], lng: position[1] });
         if (
             !initialPosition ||
             initialPosition[0] !== position[0] ||
@@ -35,7 +38,7 @@ function Account() {
                 message: "مکان شما با موفقیت تنظیم شد",
             });
         }
-        setOpen(false)
+        setOpen(false);
     };
 
     useEffect(() => {
@@ -119,10 +122,16 @@ function Account() {
                             onChange={changeHandler}
                             value={userData?.service ?? "collection"}
                         >
-                            <option className={styles.option} value={"collection"}>
+                            <option
+                                className={styles.option}
+                                value={"collection"}
+                            >
                                 تحویل رستوران
                             </option>
-                            <option className={styles.option} value={"delivery"}>
+                            <option
+                                className={styles.option}
+                                value={"delivery"}
+                            >
                                 ارسال با پیک
                             </option>
                             <option
@@ -147,10 +156,10 @@ function Account() {
 
                     <div style={{ width: "100%" }} className={styles.item}>
                         <label className={styles.label}>نقشه</label>
-                        {
-                            userData?.lat && <Map position={[userData.lat , userData.lng]} />
-                        }
-                        
+                        {userData?.lat && (
+                            <Map position={[userData.lat, userData.lng]} />
+                        )}
+
                         <button
                             onClick={handleOpenMap}
                             style={{ marginTop: "10px" }}
@@ -162,7 +171,9 @@ function Account() {
                 </div>
 
                 <div className={styles.footer}>
-                    <button onClick={update} className="btn">ذخیره</button>
+                    <button onClick={update} className="btn">
+                        ذخیره
+                    </button>
                 </div>
 
                 <Modal

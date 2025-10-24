@@ -38,7 +38,7 @@ export async function POST(req) {
                         message:
                             "آیا میخواهید از خرید رستوران قبلی انصراف دهید؟",
                     },
-                    { status: 400 }
+                    { status: 403 }
                 );
             }
 
@@ -101,7 +101,7 @@ export async function POST(req) {
         return NextResponse.json(
             {
                 success: true,
-                message: "غذای مورد نظر اضافه شد",
+                message: "اضافه شد",
             },
             { status: 200 }
         );

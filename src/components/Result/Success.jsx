@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import styles from "./Success.module.css";
 import { Result, Watermark } from "antd";
@@ -25,7 +26,7 @@ function Success({ orderId }) {
                     title="پرداخت شما موفقیت آمیز بود"
                     subTitle={`شماره سفارش : ${orderId}`}
                     extra={[
-                        <Link href={"/"} className={`btn ${styles.link}`}>
+                        <Link key="console" href={`/tracking/${orderId}`} className={`btn ${styles.link}`}>
                             پیگیری سفارش
                         </Link>,
                     ]}

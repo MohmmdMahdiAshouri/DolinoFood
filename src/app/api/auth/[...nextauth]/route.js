@@ -62,7 +62,7 @@ export const authOptions = {
                     return {
                         id: String(user._id),
                         mobile: user.mobile,
-                        roles: user.roles || ["USER"],
+                        roles: user.roles,
                         favorits : user.favorits,
                         first_name : user.first_name,
                         last_name : user.last_name,

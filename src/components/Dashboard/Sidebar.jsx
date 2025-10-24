@@ -50,7 +50,7 @@ function Sidebar() {
         {
             title: "سفارشات",
             icon: <IoDocumentTextOutline />,
-            link: "/dashboard/adminorders",
+            link: "/dashboard/adminOrders",
             access: ["MERCHANT"],
         },
         {

@@ -72,12 +72,13 @@
 }
 
 .empty {
-    height: 30px;
+    margin-top: 10px;
+    height: 35px;
     width: 100%;
-    font-size: 14px;
+    font-size: 15px;
     background: #f8f8f8;
     border-radius: 8px;
-    color: #9e9c9c;
+    color: #7e7c7c;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -4,9 +4,10 @@ import styles from "./FoodCart.module.css";
 import ChangeCart from "../Global/ChangeCart/ChangeCart";
 import { useContext, useState } from "react";
 import { CartContext } from "@/context/CartContext";
+import { isCart } from "@/utils/ClientFunctions";
 
 function FoodCart({ data }) {
-    const { addToCart } = useContext(CartContext);
+    const { addToCart, cart } = useContext(CartContext);
     return (
         <div className={styles.card}>
             <div className={styles.image}>
@@ -27,14 +28,18 @@ function FoodCart({ data }) {
                         <span>تومان</span>
                     </div>
 
-                    <button
-                        onClick={() => {
-                            addToCart(data._id);
-                        }}
-                        className={styles.add}
-                    >
-                        افزودن
-                    </button>
+                    {isCart(cart?.items, data) ? (
+                        <ChangeCart count={isCart(cart?.items||[], data).count} id={data._id}/>
+                    ) : (
+                        <button
+                            onClick={() => {
+                                addToCart(data._id);
+                            }}
+                            className={styles.add}
+                        >
+                            افزودن
+                        </button>
+                    )}
                 </div>
             </div>
         </div>

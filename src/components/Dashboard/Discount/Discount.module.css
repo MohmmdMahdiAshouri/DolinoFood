@@ -1,0 +1,22 @@
+.item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.item label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    min-width: 150px;
+}
+
+.input {
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border: 1px solid #626262;
+    border-radius: 3px;
+    width: 30%;
+    text-align: center;
+}

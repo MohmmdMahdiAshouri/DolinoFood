@@ -1,5 +1,5 @@
 import React from "react";
-import { Alert, Flex, Spin } from "antd";
+import { Flex, Spin } from "antd";
 
 function Loading({ children, loading, error }) {
     return (

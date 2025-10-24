@@ -1,13 +1,21 @@
 "use client";
 import { useEffect, useState } from "react";
 import { MapContainer, Marker, TileLayer, useMap } from "react-leaflet";
-import L from "leaflet"
-import "leaflet-routing-machine"
+import L from "leaflet";
+import "leaflet-routing-machine";
 
-function Map() {
+function Map({ data }) {
+    console.log(data);
 
-    const [start, setStart] = useState([36.315475, 59.5083894]);
-    const [end, setEnd] = useState([36.335475, 59.4983894]);
+    const [start, setStart] = useState([
+        data.restaurant[0].lat,
+        data.restaurant[0].lng,
+    ]);
+    const endLocation =
+        data?.deliveryType === "collection"
+            ? [data.restaurant[0].lat, data.restaurant[0].lng]
+            : [data?.lat, data?.lng];
+    const [end, setEnd] = useState(endLocation);
 
     const markerIcon = new L.Icon({
         iconUrl: "/Images/loc.png",
@@ -35,10 +43,7 @@ function Map() {
     };
 
     return (
-        <MapContainer
-            style={{ width: "100%", height: "300px" }}
-            zoom={15}
-        >
+        <MapContainer style={{ width: "100%", height: "300px" }} zoom={15}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             <Marker
                 icon={markerIcon}

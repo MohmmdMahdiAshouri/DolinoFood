@@ -1,4 +1,5 @@
 .delivery {
+    animation: back 1s  cubic-bezier(0.175, 0.885, 0.32, 1.275);
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),        url("/Images/fav-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -9,14 +10,49 @@
     align-items: center;
     margin-top: 50px;
     border-radius: 5px;
+    -webkit-animation: back 1s  cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes back {
+    0%{
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+    }100%{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
 }
 
 .delivery-content {
+    animation: content 1s;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: -100px;
+    -webkit-animation: content 1s;
+}
+
+@keyframes content {
+    0%{
+        transform: translateX(-80%);
+        -webkit-transform: translateX(-80%);
+        -moz-transform: translateX(-80%);
+        -ms-transform: translateX(-80%);
+        -o-transform: translateX(-80%);
+}100%{
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+}
 }
 
 .delivery-title1 {

@@ -64,5 +64,41 @@ export const validationPhoneNumber = (mobile) => {
     if (!regex.test(mobile)) {
         error["mobile"] = "شماره وارد شده صحیح نمی باشد";
     }
-    return Object.keys(error).length ? error : null
+    return Object.keys(error).length ? error : null;
+};
+
+export const addressValidation = (data) => {
+    let error = {};
+
+    if (!data?.state || data?.state < 2)
+        error["state"] = "حداقل نام استان باید دو کاراکتر باشد";
+
+    if (!data?.city || data?.city < 2)
+        error["city"] = "حداقل نام شهر باید دو کاراکتر باشد";
+
+    if (!data?.details || data?.details < 5)
+        error["details"] = "آدرس را کامل وارد کنید";
+
+    return Object.keys(error).length ? error : false;
+};
+
+export const discountValidation = (data) => {
+    let error = {};
+
+    if (!data?.code) error["code"] = "کد تخفیف نمی تواند خالی باشد";
+
+    if (!data?.start) error["start"] = "تاریخ شروع نامعتبر";
+
+    if (!data?.expire) error["expire"] = "تاریخ پایان نامعتبر";
+
+    if (new Date(data?.expire).getTime() <= new Date(data?.start).getTime())
+        error["expire"] = "تاریخ انقضای شما قبل از آغاز تاریخ شروع ثبت شده است";
+
+    // if (!data?.active) error["active"] = "لطفا کد را فعال کنید";
+
+    if(data?.value <= 0) error["value"] = "مقادیر منفی و صفر نامعتبر است";
+    if(data?.minOrder <= 0) error["minOrder"] = "مقادیر منفی و صفر نامعتبر است";
+    if(data?.usageLimit <= 0) error["usageLimit"] = "مقادیر منفی و صفر نامعتبر است";
+
+    return Object.keys(error).length ? error : false;
 };

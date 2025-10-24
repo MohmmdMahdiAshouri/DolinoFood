@@ -19,7 +19,7 @@ function ItemCart() {
                         </div>
 
                         <div className={styles.left}>
-                            <ChangeCart count={food.count}/>
+                            <ChangeCart count={food.count} id={food._id}/>
                         </div>
                     </div>
                 ))

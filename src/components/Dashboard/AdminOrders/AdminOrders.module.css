@@ -1,0 +1,14 @@
+.items label {
+    text-align: center;
+    display: block;
+}
+
+.items select {
+    display: block;
+    margin: 10px auto 20px;
+    font-family: var(--bold);
+    background: #eee;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+}

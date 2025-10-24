@@ -8,7 +8,7 @@ async function page({params}) {
         headers : {"Content-Type" : "application/json"},
         body : JSON.stringify({_id : id})
     })
-
+    
     const data = await res.json()
     return <Store data={data.data}/>;
 }

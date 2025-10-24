@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
         
         if (res.ok) {
             notifRef.current?.openSuccess("با موفقیت وارد شدید");
-            router.push("/dashboard/user")
+            // router.push("/dashboard/user")
             setMobile("")
             setUserLogin(false)
         } else {

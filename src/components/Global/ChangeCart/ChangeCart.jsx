@@ -1,20 +1,20 @@
 "use client";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { FiMinus } from "react-icons/fi";
 import { HiPlus } from "react-icons/hi";
 import styles from "./ChangeCart.module.css";
 import { CartContext } from "@/context/CartContext";
 
-function ChangeCart({count}) {
-    const [conter, setConter] = useState(1)
+function ChangeCart({count, id}) {
+    const {addToCart, decrease} = useContext(CartContext)
     return (
         <>
             <div className={styles.btns}>
-                <button onClick={() => setConter((prev) => prev + 1)}>
+                <button onClick={() => addToCart(id)}>
                     <HiPlus />
                 </button>
-                <span>تعداد : {count}</span>
-                <button onClick={() => setConter(prev => prev > 1 ? prev - 1 : prev)}>
+                <span>{count}</span>
+                <button onClick={() => decrease(id)}>
                     <FiMinus />
                 </button>
             </div>

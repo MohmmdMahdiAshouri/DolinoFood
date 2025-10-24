@@ -8,7 +8,7 @@ function Home({data}) {
         <div className='container'>
             <Delivery />
             <Populars />
-            <LastRestaurants data={data.restaurant}/>
+            <LastRestaurants data={data?.restaurant}/>
         </div>
     )
 }

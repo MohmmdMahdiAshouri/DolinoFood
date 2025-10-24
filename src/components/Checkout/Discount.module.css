@@ -20,6 +20,8 @@
 
 .code {
     background: #eee;
-    padding: 3px 10px;
+    padding: 5px 10px;
     border-radius: 5px;
+    font-size: 14px;
+    color: #555;
 }

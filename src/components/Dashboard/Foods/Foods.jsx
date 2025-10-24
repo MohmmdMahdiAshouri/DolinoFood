@@ -18,9 +18,11 @@ function Foods() {
         name: "",
         price: 0,
         catId: "",
-        catName: "",
+        catName: categories[0]?.name,
         image: "",
     });
+    console.log(categories);
+    
 
     const notifRef = useRef();
 
@@ -70,7 +72,7 @@ function Foods() {
                 name: "",
                 price: 0,
                 catId: "",
-                catName: "",
+                catName: categories[0].name,
                 image: "",
             });
             setRefresh(!refresh);
@@ -160,7 +162,12 @@ function Foods() {
         <>
             <Notification ref={notifRef} />
             <div className="header">
-                <button onClick={() => setOpen(true)} className="btn">
+                <button onClick={() => {
+                    setOpen(true)
+                    setData({
+                        ...data , catName: categories[0].name, catId : categories[0]._id
+                    })
+                    }} className="btn">
                     افزودن
                 </button>
             </div>

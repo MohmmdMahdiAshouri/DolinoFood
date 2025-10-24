@@ -12,14 +12,14 @@ export async function GET(req) {
         if (!session) throw new Error("لطفا وارد شوید");
 
         //check access - step2
-        const isAccess = checkAccess(["USER"], session.user.roles);
+        const isAccess = checkAccess(["USER"], session?.user?.roles);
         if (!isAccess) throw new Error("فقط کاربران میتوانند سفارش دهند");
 
         //connect database - step3
         await connectDB();
 
         //get user cart - step6
-        const cart = await getCartByUser(session.user.id)
+        const cart = await getCartByUser(session?.user?.id)
 
         return NextResponse.json(
             {
